@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hammer.js"></script>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery.xml2json.js"></script>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
+    
+    <script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }  @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }           @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+
+    <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
+    <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <!-- <script src="xdk/init-dev.js"></script> -->     <!-- normalizes device and document ready events, see README for details -->
+</head>
+
+<body>
+    <button id="open_tray" onclick="open_tray()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+  <i class="ion-plus"></i>
+</button>
+    <button id="open_res" onclick="open_tray()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" disabled>
+  <i class="ion-ios-analytics"></i>
+</button>
+    <div id="map"></div>
+    <div id="results">
+        <div id="results-internal">
+            <h1 id="hash-title"></h1>
+            <br />
+            <h4>Unique Users</h4>
+            <h1 id="usr-num"></h1>
+            <br />
+            <h4>Data</h4>
+            <h1 id="twit-num"></h1>
+            <br />
+            <h4>Geolocated Data</h4>
+            <h1 id="twit-loc"></h1>
+            <br />
+            <h4>Data over time</h4>
+            <div class="ct-chart"></div>
+            <br />
+            <h4>Devices</h4>
+            <div class="ct-devices"></div>
+        </div>
+    </div>
+    <div id="control">
+        <div style="display:inline-block" class="vert-center">
+            <h1 class="ion-pound"></h1>
+            <h1 class="ion-qr-scanner"></h1>
+        </div>
+    </div>
+   <script src="http://debug-software.intel.com/target/target-script-min.js#RRUKvGAwlLUhXFiDaAmWQXfG7ZNPT4W0YBzSt4e28Tg"></script>
+</body>
+</html>
